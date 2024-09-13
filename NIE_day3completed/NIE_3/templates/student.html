@@ -1,0 +1,17 @@
+
+{% extends 'basic.html' %}
+
+{% block content %}
+<h1>This is a student page.</h1>
+
+<ul>
+    {% for student in students %}
+    <li>{{student.id}}</li>
+    <li>{{student.name}}</li>
+    <li>{{student.depatment}}</li>
+    <li>{{student.college_name}}</li>
+    <li>{{student.rollnumber}}</li><hr>   
+    {% endfor %}
+</ul>
+
+{% endblock %}
