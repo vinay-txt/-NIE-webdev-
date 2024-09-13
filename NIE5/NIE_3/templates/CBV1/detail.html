@@ -1,0 +1,32 @@
+
+{% extends 'basic.html' %}
+
+{% block content %}
+<h1>Student detail page.</h1>
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+
+        <th scope="col">ID</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+       
+      <tr>
+        
+        <td>{{object.emp_name}}</td>
+        <td>{{object.emp_number}}</td>
+
+        <td>{{object.id}}</td>
+        
+      </tr>
+     
+    </tbody>
+  </table>
+
+{% endblock %}
+
