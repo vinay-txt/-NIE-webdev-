@@ -1,0 +1,25 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<div class="main">
+    <!-- Create a Form -->
+<form method="POST">
+        <!-- Security token by Django -->
+    {% csrf_token %}
+
+<h4>    Are you want to delete this item ?</h4><br>
+
+
+        <h1>{{ data.name }}</h1>
+        <br>
+            <input type="submit" value="Yes, Delete" />
+           
+            <a href = "{% url "CSE:student" %}">Cancel</a>
+            
+   
+</form>
+</div>
+
+
+{% endblock %}

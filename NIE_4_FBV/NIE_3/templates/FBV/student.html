@@ -1,0 +1,21 @@
+
+{% extends 'basic.html' %}
+
+{% block content %}
+<h1>This is a student page.</h1>
+
+<ul>
+    {% for student in students %}
+    <li>Index value:{{student.id}}</li>
+    <li>Name :{{student.name}}</li>
+    <li>Department :{{student.department}}</li>
+    <li>College name :{{student.college_name}}</li>
+    <li>Roll number :{{student.rollnumber}}</li> 
+    <a type="button" class="btn btn-primary" style="border-radius: 20px;" href= "detail/{{student.id}}">Detail</a>
+    <a type=" button " class = "btn btn-success" style="border-radius: 20px;" href ="update/{{student.id}}" >Update</a>
+    <a type = "button" class="btn btn-danger" style="border-radius: 20px;" href="delete/{{student.id}}">Delete</a>
+    <hr>
+    {% endfor %}
+</ul>
+
+{% endblock %}
